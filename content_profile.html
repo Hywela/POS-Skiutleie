@@ -1,0 +1,61 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+</head>
+<body>
+<div id="profile_tabs">
+<ul>
+<li><a href="#profile_tabs-1">Information</a></li>
+<li><a href="#profile_tabs-2">Image</a></li>
+<li><a href="#profile_tabs-3">Password</a></li>
+</ul>
+
+	<div id="profile_tabs-1">
+		<div id = "username"  >
+			<label for="userN">Username</label>
+				<input type="text" name="userN" id ="user_name" value=""  ><br/>
+				
+		</div>
+
+	</div>
+	
+	<div id="profile_tabs-2">
+<div id="test"></div>
+		<div id="temp"> 
+		<img id = "temp_image" src="" style="float:right; margin-right: 20px;">
+	<img id = "aa" src="" style="float:right; margin-right: 20px;">
+		<form id="" method="post"  target="upload_target" enctype="multipart/form-data" action="script/updateUserImage.php">
+	
+			<label for="file">Nytt bilde</label><input name="file" id="file" type="file"  />
+			<input type="submit" name="action" value="Last opp nytt bilde" /><br />
+			<iframe id="upload_target" name="upload_target" src="" style="width:0;height:0;border:0px solid #fff;"></iframe>
+		</form>
+	</div>
+	</div>
+	<div id="profile_tabs-3">
+		<!-- Hyperlinks for different divs used to change profil info -->	
+		<div id = "undertitle"> </div>
+		<!-- Form for posting the info to profil.js -->
+		<form id="regForm" onsubmit="return false;">
+			<label for="pwd">New Password</label>
+				<input type="password" name="pwd" title="enter new password" id="pwd"><span id="pwdStatus"></span><br/>
+			<label for="pwd">Re enter new password</label>
+				<input type="password" name="pwd2" title="enter new password again" id="pwd2"><span id="pwd2Status"></span><br/>
+			<label for="pwd">Old password</label>
+				<input type="password" name="oldPwd" title="old password" id="oldPwd"><br/>
+			<input type="button" value="Update" onclick="javascript:updatePwd(this.form)"/>
+		</form>
+	</div>
+	</div>
+</body>
+
+
+
+<script type="text/javascript" src="js/passwordChecks.js"></script>
+<script type="text/javascript" src="js/profile.js"></script>
+
+</html>
+
+
+
+ 

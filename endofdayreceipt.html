@@ -1,0 +1,224 @@
+<meta charset="utf-8">
+    <link href="css/endofday-style.css" rel="stylesheet" />
+	<DIV CLASS="panel panel-primary hidden-print" id ="overview">
+		<DIV CLASS="panel-heading">
+		
+		    <a href="javascript:void(0)" onclick="javascript:print()"class="btn btn-primary btn-lg" >Print</a>
+             &nbsp;&nbsp;&nbsp;
+			   <a id="sendbutton"></a>
+		</DIV>	
+			
+		</DIV>
+	
+		<DIV id="receipt_input"CLASS="panel-body">
+		</DIV>
+        
+<div class="container">
+            <div  class="row">
+       <div class="col-lg-6 col-md-6 col-xs-6">
+         <h4>  <strong>Oppgjør NR : <span id="receipt_id"></span></strong></h4>
+         <br>
+       </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+         <h4>  <strong>Dato :  <span id="receipt_date" >00.00.00</span></strong></h4>
+         <br>
+       </div>
+       </div>
+    
+          <div class="overhead_info" class="col-lg-6 col-md-6 col-xs-6" >
+            
+               <strong>   Gålå  Ski Arena </strong>
+               <br>
+               <strong>   Skiutleie </strong>
+                <br />
+                  <i>Org :</i> 977057248
+              
+         </div>
+     
+     <div  class="row text-center contact-info">
+         <div class="col-lg-12 col-md-12 col-xs-12">
+             <hr />
+             <span>
+                 <strong>Epost : </strong>  skiutleie@gala.no
+             </span>
+             <span>
+                 <strong>Tlf : </strong>  +47 - 612 97 634
+             </span>
+            <!--  <span>
+                 <strong>Fax : </strong>  +012340-908- 890 
+             </span> --> 
+             <hr />
+         </div>
+     </div>
+
+       
+     <div  class="row pad-top-botm client-info">
+         <div class="col-lg-6 col-md-6 col-xs-6">
+         <h4>  <strong>Oppgjør er tatt av:</strong></h4>
+           <strong > 	<input class="form-control" type="text" name="name" id="name"  />
+          </strong>
+            <br>
+    </div>
+          <div class="col-lg-6 col-md-6 col-xs-6">
+            
+               <h4>  <strong >Statistikk </strong></h4>
+            
+            
+            <b>Antall Kvittering registrert/oppdatert: </b> <span id="total_receipt_count">ERROR </span> 
+              <br />
+            <b>Faktura registrert : </b> <span id="total_faktura_count">ERROR </span> 
+              <br />
+            <b>Voucher registrert : </b> <span id="total_voucher">ERROR </span> 
+              <br />
+            <b>Antall Ikke Betalt : </b> <span id="total_not_paid">ERROR </span>  
+              <br />
+            <b>Totalt inntjent : </b> <span id="total_amount">ERROR </span>
+           
+           
+         </div>
+     </div>
+      <br />
+        <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                          
+                            <tbody>
+                   		    <tr>
+                            <td>Kontantbeholding før start/veksel:</td>
+                            <td ><input class="form-control" type="Number"  /></td>
+                            </tr>
+                   		    <tr>
+                            <td>Faktura Salg/voucher:</td>
+                            <td ><input class="form-control" type="Number" /></td>
+                            </tr>                   
+                         
+                            </tbody>
+                        </table>
+                       </div>   
+     <div class="row" align="right">
+         <div class="col-lg-6 col-md-6 col-xs-6" id="table_middle_content">
+           <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Kasse</th>
+                                    <th>Kroner</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                   		    <tr>
+                            <td>Datasystem Kontanter:</td>
+                            <td id="totalt_in_cash">0</td>
+                            </tr>
+                   		    <tr>
+                            <td>Kasse - Veksel:</td>
+                            <td> 	 <input class="form-control" type="Number" name="cash" id="counted_cash"  />	</td>
+                            </tr>                                        
+                     		  <tr>
+                            <td>Differanse:</td>
+                            <td ><input class="form-control" type="Number" /></td>
+                            </tr>
+                                <tr>
+                                    <th>Veksel:</th>                                                        
+                                     <th><input class="form-control" type="Number"  id="c_tilNext"  /></th>
+                                </tr>
+                                  <tr>
+                                    <th>Uttak til bank:</th>                                                        
+                                     <th><input class="form-control" type="Number" id="out_to_bank"  /></th>
+                                </tr>
+                            </tbody>
+                        </table>
+               </div>
+   
+     </div>
+     
+     <div class="col-lg-6 col-md-6 col-xs-6" id="table_middle_content">
+           <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Bankterminal</th>
+                                    <th>Kroner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                   		    <tr>
+                            <td>Datasystem Kort:</td>
+                            <td id="totalt_in_card">0</td>
+                            </tr>
+                   		    <tr>
+                            <td>Bankterminal:</td>
+                            <td ><input class="form-control" type="Number" name="card" id="card"  /></td>
+                            </tr>                   
+                          <tr>
+                            <td>Differanse:</td>
+                            <td ><input class="form-control" type="Number" /></td>
+                            </tr>
+                            </tbody>
+                        </table>
+               </div>
+   
+     </div>
+     
+     
+ </div>
+ <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                      
+                            <tbody>
+                   		    <tr>
+                            <td>Total (terminal + uttak) :</td>
+                            <td ><input class="form-control" type="Number" id="totalt_out" /></td>
+                            </tr>
+                   	           
+                         
+                            </tbody>
+                        </table>
+                       </div>   
+ <div class="row" >
+     <div class="col-lg-12 col-md-12 col-xs-12" >
+     <b>Kommentar: </b>
+     <br>
+     <textarea class="form-control" name="comment_input" id="comment_endofday"></textarea>
+					
+     <br>
+		</div>
+</div>
+<div class="row" >
+     <div class="col-lg-4 col-md-4 col-xs-4" >
+    <b>Kvitterings id'er til faktura</b>
+   <br>
+   <span id="faktura_numbers">Ingen Kvittering med faktura status</span>
+     </div>
+     <div class="col-lg-4 col-md-4 col-xs-4" >
+    <b>Kvitterings id'er til Voucher</b>
+   <br>
+   <span id="voucher_numbers">Ingen Kvittering med Voucher status</span> 
+   
+     </div>
+     <div class="col-lg-3 col-md-3 col-xs-3" >
+    <b>Kvitterings id'er til Ikke Betalt</b>
+   <br>
+   <span id="not_paid_numbers">Ingen Kvittering med ikke betalt status</span>  
+     </div>
+ </div>
+ <br>
+ <br>	
+ <div class="row signature" >
+     <div class="col-lg-6 col-md-6 col-xs-6" >
+    <h4><Strong>Signatur</Strong></h4>
+  <br>
+  <br>
+  <br>
+<HR>
+     </div>
+     <div class="col-lg-6 col-md-6 col-xs-6" >
+    <h4><Strong>Dato : </Strong></h4>
+   <br>
+  <br>
+  <br>
+<HR>
+   
+     </div>
+   
+ </div>
+</div>

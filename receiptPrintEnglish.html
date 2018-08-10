@@ -1,0 +1,162 @@
+<html>
+<header>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet">
+<!-- CSS -->
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="css/custom-style.css" rel="stylesheet" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	charset="utf-8" >
+</header>
+<body>
+	<DIV CLASS="panel panel-primary-hidden-print" id ="overview">
+		<DIV CLASS="panel-heading">
+		
+			     <a href="#" class="btn btn-primary btn-lg" >Print Invoice</a>
+             &nbsp;&nbsp;&nbsp;
+          
+			
+			
+			
+			
+			
+		</DIV>
+	
+		<DIV id="receipt_input"CLASS="panel-body">
+	
+       	</DIV>  
+<div class="container print">
+     
+       <div class="row pad-top-botm ">
+         <div class="col-lg-4 col-md-4 col-xs-4 ">
+            <img src="img/Gålå_receipt_foto_changeIT.jpg" style="padding-bottom:20px;" /> 
+         </div>
+          <div class="col-lg-4 col-md-4 col-xs-4">
+            
+               <strong>   Gålå  SkiUtleie </strong>
+              <br />
+                  <i>Adresse :</i> 1111 , Gålå,
+              <br />
+                 2646, Sør-Fron,
+              <br />
+                  Norway.
+              
+         </div>
+     </div>
+     <div  class="row text-center contact-info">
+         <div class="col-lg-10 col-md-10 col-xs-10">
+             <hr />
+             <span>
+                 <strong>Email : </strong>  info@yourdomain.com 
+             </span>
+             <span>
+                 <strong>Call : </strong>  +47 - 890- 789- 9087 
+             </span>
+              <span>
+                 <strong>Fax : </strong>  +012340-908- 890 
+             </span>
+             <hr />
+         </div>
+     </div>
+       <div  class="row pad-top-botm client-info">
+       <div class="col-lg-4 col-md-4 col-xs-4" id="ddd">
+         <h4>  <strong>Receipt : <span id="receipt_id"></span></strong></h4>
+       </div>
+       </div>
+       
+     <div  class="row pad-top-botm client-info">
+         <div class="col-lg-4 col-md-4 col-xs-4">
+         <h4>  <strong>Client Information</strong></h4>
+           <strong id="name" >  Jhon Deo Chuixae</strong>
+            <br>
+             <b>Call :</b> <span id="telephone"> +90-908-567-0987</span>
+              <br />
+            
+         </div>
+          <div class="col-lg-4 col-md-4 col-xs-4">
+            
+               <h4>  <strong >Payment Details </strong></h4>
+            <b>Bill Amount :  <span id="total_amount">990 </span> NOK </b>
+              <br />
+               Rented To Date : <span id="rented_to_date"> 01th August 2014</span> 
+              <br />
+               <b>Payment Status :  <span id="payment_status"> Paid </span></b>
+               <br />
+               Rented Date :  <span id="rented_date"> 10th August 2014</span>
+           
+         </div>
+     </div>
+      <br />
+       
+     <div class="row">
+         <div class="col-lg-10 col-md-10 col-xs-10">
+           <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Quantity</th>
+                                    <th>Perticulars</th>
+                                    <th>Unit Price</th>
+                                     <th>Sub Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="article_lines">
+                                
+                                
+                            </tbody>
+                        </table>
+               </div>
+                  <hr />
+             <div class="ttl-amts">
+               <h5>  Total Amount :  <span id="foot_total_amount">900</span> NOK </h5>
+             </div>
+             <hr />
+               <div >
+                 Paid Card :  <span id="foot_card_amount">900</span> NOK
+             </div>
+            <br />
+               <div >
+              Paid Cash :  <span id="foot_cash_amount">900</span> NOK 
+             </div>
+            <br />
+             <div >
+               Total Paid :  <span id="foot_paid_amount">900</span> NOK 
+             </div>
+             <hr />
+               <div class="ttl-amts">
+               <h5>  Money Back :  <span id="foot_back_amount">900</span> NOK </h5>
+             </div>
+              <div class="ttl-amts">
+                  <!-- <h5>  Tax : 90 USD ( by 25 % on bill ) </h5> -->
+             </div>
+             <hr />
+              <div class="ttl-amts">
+                  <h4> <strong>Bill Amount :<span id="big_foot_total_amount"> 990</span> NOK</strong> </h4>
+             </div>
+         </div>
+     </div>
+      <div class="row">
+         <div class="col-lg-10 col-md-10 col-xs-10">
+            <strong> Important: </strong>
+             <ol>
+                  <li>
+                    This is an electronic generated invoice so doesn't require any signature.
+
+                 </li>
+                 <li>
+                     Please read all terms and polices on  www.yourdomaon.com for returns, replacement and other issues.
+
+                 </li>
+             </ol>
+             </div>
+         </div>
+  
+ </div>
+ </DIV>
+
+ </body>
+ </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/handler_functions.js"></script>
+<script type="text/javascript" src="js/getSelecters.js"></script>
+<script type="text/javascript" src="js/data_checkers.js"></script>
+<script type="text/javascript" src="js/endofday.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-theme.min.css">
+<meta charset="utf-8">
+<title>Inn</title>
+</head>
+<body>
+<div class="container-fluid">
+	
+	
+		
+		<div class="panel panel-primary hidden-print">
+		<div class="panel-heading hidden-print">
+			<h2 class="panel-title hidden-print">Dagens Oppgjør</h2>
+		</div>
+
+<div class="panel-body" >
+<div class="row-fluid">
+<b> Før oppgjør venligst sjekk utestånde, etter knappen er trykt så er det ikke muligt å forandre,
+viss feil forekommer venligts kontakt system administrator.</b>
+      <form role="form"  id="nameForm" action="" onsubmit="return false;" >
+					<div class="panel-body">
+	
+						<table class ="hidden-print">
+							<tr>
+						
+								<td class="col-lg-2">Dato:<input  id="datepicker"
+										class="form-control" type="date" name="datepicker"></span>
+
+								</td>
+								<td class="col-lg-1">
+									<button id="eodButton"  class="btn btn-md btn-success" type="submit"
+												onClick="endOfDayReceipt(this.form)"
+												>Avslutt Dagen</button>
+								</td>
+							
+						</table>
+						
+					<br>
+					
+					
+				
+	
+					</div>
+					</form>
+      
+              
+</div>
+	
+</div>
+	</div>
+	
+	
+	
+<!-- INFO -->
+<div id="print">
+	
+
+
+</div>	
+	
+</div>
+</body>
+</html>

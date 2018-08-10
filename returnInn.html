@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="js/handler_functions.js"></script>
+<script type="text/javascript" src="js/getSelecters.js"></script>
+<script type="text/javascript" src="js/data_checkers.js"></script>
+<script type="text/javascript" src="js/return_inn.js"></script>
+<script type="text/javascript" src="js/update.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-theme.min.css">
+<meta charset="utf-8">
+<title>Inn</title>
+</head>
+<body>
+
+
+
+
+	<div class="panel panel-primary hidden-print">
+		<div id="info_panel" class="panel-heading">
+			<h1 align="center" class="panel-title">Inn Skjema</h1>
+		</div>
+
+	</div>
+
+	<div class="panel panel-primary hidden-print">
+		<div class="panel-heading hidden-print">
+			<h2 class="panel-title hidden-print">Søk</h2>
+		</div>
+		<div class="panel-body hidden-print" id="customerInfo"
+			data-customerid="">
+
+			<table>
+				<tr>
+					<td class="col-lg-1">
+						<!-- 		<LABEL class="sr-only" 	 FOR="select_search_method">Søkemåte</LABEL> 
+						<Select class="form-control" 
+								 ID="select_search_method">
+								<option value="1"> Kvitterings Nummer </option>
+								<option value="2"> Navn eller TelefonNummer </option>
+						
+								</Select> 
+								 -->
+					</td>
+
+				</tr>
+
+
+
+			</table>
+
+			<div class="row-lg-1">
+				<br>
+
+				<div class="row-lg-1">
+					<div id="search_receipt" class="col-lg-10" class="hidden-print">
+						<input class="form-control" type="text" name="receipt_article"
+							id="receipt_article"
+							placeholder="Skriv inn kvittering nummer : 5" />
+
+					</DIV>
+					<div class="hidden">
+						<div class="checkbox">
+							<label> <input name="englishCheck" type="checkbox">
+								Engelsk Kvittering
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row-lg-2">
+					<button class="btn btn-md btn-success" type="button"
+						id="button_receipt" disabled="disabled">Finn Kvittering</button>
+
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+<div id ="mainView"></div>
+
+
+
+
+
+
+	
+
+
+
+</body>
+</html>

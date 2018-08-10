@@ -1,0 +1,145 @@
+﻿<html>
+<header>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/receipt.js"></script>
+
+ <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Free Bootstrap Invoice</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+	  <!-- CUSTOM STYLE  -->
+ 	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="css/custom-style.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+    
+
+</header>
+<body>
+	<DIV CLASS="panel panel-primary hidden-print" id ="overview">
+		<DIV CLASS="panel-heading">
+		
+		    <a href="javascript:void(0)" onclick="javascript:print()"class="btn btn-primary btn-lg" >Print</a>
+             &nbsp;&nbsp;&nbsp;
+              <a href="#" class="btn btn-info btn-lg" >Download In Pdf</a>
+			  <a href="#" class="btn btn-danger btn-lg" >Krediter</a>
+			 <a id="commentButton"></a>
+			  <a id="payMentButton"></a>
+			   <a id="deliverButton"></a>
+		</DIV>	
+			
+		</DIV>
+	
+		<DIV id="receipt_input"CLASS="panel-body">
+		</DIV>
+        
+<div class="container">
+            <div  class="row">
+       <div class="col-lg-12 col-md-12 col-xs-12">
+         <h4>  <strong>Kvittering : <span id="receipt_id"></span></strong></h4>
+         <br>
+       </div>
+       </div>
+       <div class="row pad-top-botm ">
+         <div class="col-lg-6 col-md-6 col-xs-6 ">
+            <img src="css/img/galabig.jpg" style="padding-bottom:20px;" /> 
+         </div>
+          <div class="overhead_info" class="col-lg-6 col-md-6 col-xs-6" >
+            
+               <strong>   Gålå  Ski Arena </strong>
+               <br>
+               <strong>   Skiutleie </strong>
+                <br />
+                  <i>Org :</i> 977057248,
+              <br />
+                  <i>Adresse :</i> Børkdalsvegen,
+              <br />
+                 2646, Gålå,
+              <br />
+                  Norge.
+              
+         </div>
+     </div>
+     <div  class="row text-center contact-info">
+         <div class="col-lg-12 col-md-12 col-xs-12">
+             <hr />
+             <span>
+                 <strong>Epost : </strong>  skiutleie@gala.no
+             </span>
+             <span>
+                 <strong>Tlf : </strong>  +47 - 612 97 634
+             </span>
+            <!--  <span>
+                 <strong>Fax : </strong>  +012340-908- 890 
+             </span> --> 
+             <hr />
+         </div>
+     </div>
+
+       
+     <div  class="row pad-top-botm client-info">
+         <div class="col-lg-6 col-md-6 col-xs-6">
+         <h4>  <strong>Leier</strong></h4>
+           <strong id="name" >  Jhon Deo Chuixae</strong>
+            <br>
+             <b>Tlf :</b> <span id="telephone"> +90-908-567-0987</span>
+              <br />
+            
+         </div>
+          <div class="col-lg-6 col-md-6 col-xs-6">
+            
+               <h4>  <strong >Betaling </strong></h4>
+            <b>Total Sum : </b> <span id="total_amount">990 </span> Kr 
+              <br />
+               <b> Leid til : </b><span id="rented_to_date"> 01th August 2014</span> 
+              <br />
+               <b>Betalings metode : </b> <span id="payment_status"> Paid </span>
+               <br />
+              <b>  Leid : </b> <span id="rented_date"> 10th August 2014</span>
+           
+         </div>
+     </div>
+      <br />
+       
+     <div class="row" align="right">
+         <div class="col-lg-12 col-md-12 col-xs-12">
+  
+               <div >
+                 Betalt Kort :  <span id="foot_card_amount">900</span> Kr
+             </div>
+            <br />
+               <div >
+              Betalt Kontant :  <span id="foot_cash_amount">900</span> Kr 
+             </div>
+            <br />
+             <div >
+               Totalt Betalt :  <span id="foot_paid_amount">900</span> Kr 
+             </div>
+               <div>
+               <h5>  Tilbake :  <span id="foot_back_amount">900</span> Kr </h5>
+             </div>
+              <div class="ttl-amts">
+                  <!-- <h5>  Tax : 90 USD ( by 25 % on bill ) </h5> -->
+             </div>
+             <hr />
+              <div >
+                  <h4> <strong id ="foot_endMessage">Kredit : <span id="big_foot_total_amount"> 990</span>,- Kr</strong> </h4>
+             </div>
+         </div>
+     </div>
+     
+  
+ </div>
+
+
+ </body>
+ </html>

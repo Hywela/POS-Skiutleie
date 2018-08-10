@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+
+
+
+<script type="text/javascript" src="js/update_receipt.js"></script>
+
+
+
+
+<!-- CSS -->
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	charset="utf-8" >
+<title>Registrer Leie</title>
+
+
+</head>
+<body>
+	<div id="mainView"class="container-fluid">
+	
+		<div class="row-fluid">
+		
+			<div class="col-md-10">
+
+			
+
+				<div class="panel panel-primary hidden-print ">
+					<div id="info_panel" class="panel-heading">
+						<h1 align="center" class="panel-title">Kvittering: <span id="receipt_id_updater">
+						ERROR</span></h1>
+					</div>
+
+				</div>
+
+				<div id ="customer_info_iput" class="panel panel-primary hidden-print ">
+					<div class="panel-heading">
+						<h2 class="panel-title">Leietaker</h2>
+					</div>
+					<form role="form"  id="nameForm" action="">
+					<div class="panel-body" id="customerInfo" data-customerid="0">
+	
+						<table class ="hidden-print">
+							<tr>
+								<td class="col-lg-2"><label for="first_name">Fornavn:
+								</label> <input class="form-control"  type="text" name="first_name"
+									id="first_name" pattern=".{3,}" required title="1 characters minimum" /></td>
+								<td class="col-lg-2"><label for="last_name">Etternavn:</label>
+									<input  pattern=".{1,49}" required title="1 til 49 bokstaver takk" class="form-control" type="text" name="last_name"
+									id="last_name" /></td>
+								<td class="col-lg-2"><label for="telephone">Telefon:
+								</label> <input class="form-control"   pattern=".{2,49}" required title="telefon nummer trenger kan ha 1-49 "  type="text" name="telephone"
+									id="telephone" /></td>
+								<td class="col-lg-3"><label for="datepicker">Til
+										Dato:</label> <input onchange="dateDifference()" id="datepicker"
+									class="form-control" type="date" name="datepicker"></td>
+								<td class="col-lg-1">Antall dager: <span class="badge"
+									id="days" data-fixeddays="0" data-extradays="0">0</span>
+								</td>
+							
+							</tr>
+						</table>
+						
+					</div>
+					<button class ="sr-only" class="btn btn-md btn-success" type="submit"
+												id="add_name" 
+												>Legg
+												Til</button>
+					
+					</form>
+				</div>
+
+		<DIV id="receipt_input">
+</DIV>
+			<div class="panel panel-primary" id="articled_overview">
+					<div class="panel-heading">
+						<h2 class="panel-title">Kvittering Artikler</h2>
+					</div>
+					<div class="panel-body" class="hidden" id="article_custommer">
+
+						<!-- Table -->
+						<table class="table" id="article_table">
+							<thead>
+								<tr>
+									<th>Antall</th>
+									<th>Vare</th>
+									<th>Pris pr.stk</th>
+									<th>Pris pr.linje</th>
+								</tr>
+							</thead>
+							<tbody id="article_lines">
+							</tbody>
+							<tfoot id="article_foot">
+								<tr>
+									<th align="LEFT" >Total</th>
+									<th></th>
+									<th></th>
+									<th> <span> <span id="old_sum" >0</span> -,</span></th>
+									
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				
+				<div class="panel panel-primary" id="overview">
+					<div class="panel-heading">
+						<h2 class="panel-title">Oversikt</h2>
+					</div>
+					<div class="panel-body" class="hidden" id="overview_custommer">
+
+						<!-- Table -->
+						<table class="table" id="overview_table">
+							<thead>
+								<tr>
+									<th>Antall</th>
+									<th>Vare</th>
+									<th>Pris pr.stk</th>
+									<th>Pris pr.linje</th>
+									<th id ="headdelete">Slett</th>
+								</tr>
+							</thead>
+							<tbody id="overview_input">
+							</tbody>
+							<tfoot id="overview_foot">
+								<tr>
+									<th align="LEFT" >Total</th>
+									<th></th>
+									<th></th>
+									<th> <span> <span id="sum" >0</span> -,</span></th>
+									<th id ="footdelete"></th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				<br>
+				<div  id="addItemDIv" class="panel panel-primary hidden-print ">
+					<div class="panel-heading">
+						<h2 class="panel-title">Legg til</h2>
+					</div>
+					<div class="panel-body">
+						<!-- Table -->
+
+						<form role="form" onsubmit="return false;" id="addItemForm" action="">
+
+							<p>PlaceHolder</p>
+							<div class="row-lg-1"></div>
+							<div class="row-lg-1">
+								<table>
+									<tr>
+										<td class="col-lg-1"><label for="count">Antall: </label>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="col-lg-1"><input class="form-control" 
+											type="Number" name="count" id="count" value="1" min="1" max="99" /></td>
+
+										<td class="col-lg-2"><label class="hidden"
+											for="equipmentOption">Velg Katogori</label> <select
+											class="form-control" id="equipmentOption"
+											name="equipmentOption">
+												<option value="0" selected>-- Velg Kategori --</option>
+										</select></td>
+										<td class="col-lg-7">
+											<div >
+												<label class="sr-only" for="miscellaneous"  >Vare</label> <input
+													class="form-control" id="miscellaneous" type="text"
+													placeholder="vare" name="miscellaneous" maxlength="49" />
+
+											</div>
+											<div class="col-lg-3">
+												<label class="sr-only" for="ageGroup">Pris Gruppe</label> <select
+													class="form-control" id="ageGroup" name="ageGroup">
+													<option value="0" selected>-- Pris Gruppe --</option>
+												</select>
+
+
+											</div>
+											<div class="col-lg-3">
+												<label class="sr-only" for="equipmentPackage">Vare</label> <select
+													class="form-control" id="equipmentPackage"
+													data-price_table="" name="equipmentPackage">
+													<option value="0" selected>-- Vare --</option>
+												</select>
+											</div>
+										</td>
+
+										<td class="col-lg-1 "><input class="form-control"
+											type="number" name="price" id="price" value="0" min="-99999" max="99999"/></td>
+										<td class="col-md-1">
+											<button class="btn btn-md btn-success" type="submit"
+												id="add_item" disabled="disabled"
+												>Legg
+												Til</button>
+
+										</td>
+
+
+									</tr>
+								</table>
+
+							</div>
+
+
+
+
+
+
+						</form>
+
+
+					</div>
+				</div>
+			
+			
+
+</div>
+			<div class="col-fluid-fixed-top" style="position: fixed; right: 0">
+
+
+
+				<div id="submitForm" class="recipe_form">
+					<form class="form-inline" role="form" onsubmit="return false;"
+						id="addRecipt" action="">
+
+						<div id="addItem" class="panel panel-primary">
+							<div class="panel-heading">
+								<h2 class="panel-title">Avslutt</h2>
+							</div>
+							<div class="panel-body">
+
+								<div class="row-lg-1">
+									<label for="comment">Kommentar</label>
+								</div>
+								<div class="row-lg-1">
+									<textarea class="form-control" cols="30" rows="5"
+										name="comment" id="comment"></textarea>
+								</div>
+								<div class="row-lg-1">
+									<br>
+								</div>
+								<div class="row-lg-1">
+							<label  for="paymentMethod">Betalings Metode:</label>
+								</div>
+								
+								<div class="form-group row-lg-1">
+										 
+									<select class="form-control" id="paymentMethod"
+													name="paymentMethod">
+													
+												</select>
+
+								</div>
+								<div class="row-lg-1">
+									<br>
+								</div>
+						
+								<div class="row-lg-1">
+
+									<label for="total_price">Å betale: </label>
+								</div>
+
+								<div class="form-group row-lg-1">
+
+									<span>kr <input readonly="readonly" class="form-control" type="number"
+										name="total_price" id="total_price" value="0" /> ,-
+									</span>
+
+								</div>
+						
+								<!-- INN CARD -->
+								<div class="hidden" id ="div_inn_card">
+								<div class="row-lg-1">
+									<br>
+								</div>
+								
+								<div class="row-lg-1">
+
+								<label  for="inn_card">Betalt Kort: </label>
+								</div>
+
+								<div  class="form-group row-lg-1">
+
+									<span>kr <input class="form-control" type="number"
+										name="inn_card" id="inn_card" value="0" 
+										min="0" max="99999"/> ,-
+									</span>
+
+								</div>
+								</div>
+
+								<!--  INN CASH -->
+								<div class="hidden" id ="div_inn_cash">
+								<div class="row-lg-1">
+									<br>
+								</div>
+								
+							<div class="row-lg-1">
+
+								<label  for="inn_cash">Inn Kontant: </label>
+								</div>
+
+								<div  class="form-group row-lg-1">
+
+									<span>kr <input class="form-control" type="number"
+										name="inn_cash" id="inn_cash" value="0"
+										min="-999999" max="999999" /> ,-
+									</span>
+
+								</div>
+								</div>
+
+
+								<!-- BACK CASH -->
+								<div class="hidden" id ="div_back_cash">
+								<div class="row-lg-1">
+									<br>
+								</div>
+								
+								<div class="row-lg-1">
+
+								<label  for="back_cash">Tilbake Kontant: </label>
+								</div>
+
+								<div  class="form-group row-lg-1">
+
+									<span>kr <input  class="form-control" type="number"
+										name="back_cash" id="back_cash" value="0" /> ,-
+									</span>
+
+								</div>
+								</div>
+								<div class="row-lg-1">
+									<br>
+								</div>
+							
+							<div class="checkbox row-lg-1">
+    <label>
+      <input name ="englishCheck" type="checkbox"> Engelsk Kvittering
+    </label>
+    
+  </div>
+														<div class="row-lg-1">
+  <br>
+									<label class="sr-only" for="submit_button">Totalt: </label>
+									<button class="btn btn-lg btn-success"
+										onclick="send_rec_form(this.form);" 
+										type="submit" id="submit_button">Oppdater</button>
+
+								</div>
+
+
+
+
+
+
+							</div>
+						</div>
+
+
+
+
+					</form>
+
+				</div>
+
+
+
+
+			</div>
+		</DIV>
+	</DIV>
+
+
+</body>
+</html>

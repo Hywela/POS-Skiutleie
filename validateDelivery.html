@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="js/comment.js"></script>
+<script type="text/javascript" src="js/return.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<meta  charset="utf-8">
+</head>
+<body>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#rental_delivery" data-whatever="@mdo">Innlever</button>
+
+<div class="modal fade" id="rental_delivery" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Oppdater Kommentar</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+
+        <h2>Er du sikker på at du vill tilbake Levere?</h2>
+            <div class="form-group">
+            <label for="message-text-delivery" class="control-label">System Kommentar:</label>
+            <textarea class="form-control" id="message-text-delivery"></textarea>
+          </div>
+               <div class="form-group">
+            <label for="message-text-delivery" class="control-label">Kvitterings Kommentar:</label>
+            <textarea class="form-control" id="message-text-comment-not-saved" placeholder="Denne Kommentaren Kommer på tilbake kvittering, men lagres ikke.
+            "></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nei</button>
+        <button type="button" onClick="validateDelivery()" class="btn btn-primary" data-dismiss="modal" data-target="#comment_popup">Ja</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

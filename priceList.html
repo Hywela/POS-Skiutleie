@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/handler_functions.js"></script>
+<script type="text/javascript" src="js/getSelecters.js"></script>
+<script type="text/javascript" src="js/price_list.js"></script>
+ <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Free Bootstrap Invoice</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+	  <!-- CUSTOM STYLE  -->
+ 	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="css/custom-style.css" rel="stylesheet" />
+
+ <meta charset="utf-8" />
+</head>
+<body>
+<div id ="info_panel"></div>
+				<div  id="priceSelecter" class="panel panel-primary hidden-print ">
+					<div class="panel-heading">
+						<h2 class="panel-title">Legg til</h2>
+					</div>
+					<div class="panel-body">
+						<!-- Table -->
+
+						<form role="form" onsubmit="return false;" id="priceListForm" action="">
+
+							<p>PlaceHolder</p>
+							<div class="row-lg-1"></div>
+							<div class="row-lg-1">
+								<table>
+									<tr>
+										<td class="col-lg-1">
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="col-lg-1"></td>
+
+										<td class="col-lg-2"><label class="hidden"
+											for="equipmentOption">Velg Katogori</label> <select
+											class="form-control" id="equipmentOption"
+											name="equipmentOption">
+												<option value="0" selected>-- Velg Kategori --</option>
+										</select></td>
+										<td class="col-lg-7">
+	
+											<div class="col-lg-3">
+												<label class="sr-only" for="ageGroup">Pris Gruppe</label> <select
+													class="form-control" id="ageGroup" name="ageGroup">
+													<option value="0" selected>-- Pris Gruppe --</option>
+												</select>
+
+
+											</div>
+											 <div class="col-lg-3">
+												<label class="sr-only" for="equipmentPackage">Vare</label> <select
+													class="form-control" id="equipmentPackage"
+													data-price_table="" name="equipmentPackage">
+													<option value="0" selected>-- Vare --</option>
+												</select>
+												
+											</div> 
+											<a id="addPackageButton" CLASS="glyphicon glyphicon-plus" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addPackage" data-whatever="@mdo"></a>
+										</td>
+
+
+									</tr>
+								</table>
+
+							</div>
+
+
+
+
+
+
+						</form>
+
+
+					</div>
+				</div>
+				
+				<!-- TABLE LIST  -->
+				
+				<div  id="priceListEditing" class="panel panel-primary hidden">
+					<div class="panel-heading">
+						<h2 class="panel-title">Legg til</h2>
+					</div>
+					<div class="panel-body">
+						<!-- Table -->
+ <h5>Dag 0 er ekstra dager.</h5>
+				    <div class="row" align="right">
+				   
+         <div class="col-lg-12 col-md-12 col-xs-12">
+           <div class="table-responsive">
+								<table class="table table-striped table-bordered table-hover">
+								<thead> 
+								<tr>
+								<td>Dag</td>
+								<td>Pris</td>
+							
+								</tr>
+								</thead>
+								<tbody id = "price_list_body">
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 0 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 1 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 2 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>									
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 3 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									<tr >
+										<td class="col-lg-1">
+										<span id="day"> 4 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 5 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 6 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									<tr>
+										<td class="col-lg-1">
+										<span id="day"> 7 </span>
+										<span class="hidden" id="id"> 0 </span>
+										</td>
+										<td class="col-lg-1"><input class="form-control" id="price" type="number" placeholder="Skriv inn pris her"></td>			
+									</tr>
+									</tbody>
+							<tfoot>
+							</tfoot>
+								<tr>
+								<td></td>
+								<td>
+								<button class="btn btn-md btn-success" type="submit"
+												id="updatePriceList" onClick="updatePriceList()"
+												>Legg Til / Oppdater Priser</button>
+								</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			<!-- POPUP -->
+			
+
+<div class="modal fade" id="addPackage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Legg til varenummer</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+		<div class="form_group">
+        <label class="form-control" for="package_name" >Navn: </label>
+        <input class="form-control" type="text" id="package_name">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nei</button>
+        <button type="button" onClick="addPackage()" class="btn btn-primary" data-dismiss="modal" data-target="#comment_popup">Lagre</button>
+      </div>
+    </div>
+  </div>
+</div>
+			
+
+
+
+</body>
+</html>

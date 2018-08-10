@@ -1,0 +1,66 @@
+
+  <meta 
+	http-equiv="Content-Type" 
+	content="text/html; charset=utf-8" 
+	name="viewport" 
+	content="width=device-width, initial-scale=1"
+
+/>
+<script type="text/javascript" src="js/handler_functions.js"></script>
+<script type="text/javascript" src="js/navbar.js"></script>
+
+   <nav  class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="home" class="navbar-brand" href="javascript:void(0)";">Gålå AS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id ="main" class="nav navbar-nav">
+        <li><a  href="javascript:void(0)" onclick="javascript:rentOut()" >Registrer Utleie</a></li>
+         <li ><a  href="javascript:void(0)" onclick="javascript:returnInn()" >Registrer Innlevering</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-left" role="search" id="search_form">
+        <div class="form-group">
+        <select class="form-control" id="receipt_search" name="receipt_search">
+			<option value="1" selected>-- ID --</option>
+			<option value="2" >-- NAVN --</option>
+			<option value="3" >-- DATO UT--</option>
+			<option value="4" >-- DATO IN--</option>
+		</select>
+          <input type="text" id="parameter1_search" class="form-control" placeholder="Search">
+          <input type="text" id="parameter2_search" class="form-control hidden" placeholder="Etter Navn">
+          <input type="text" id="parameter3_search" class="form-control hidden" placeholder="Telephone">
+          <input id="parameter4_search" class="form-control hidden" type="date">
+        </div>
+        <button type="submit"class="btn btn-default">Søk</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Verktøy <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="javascript:void(0)" onclick="javascript:futureRentalOut()">Forhands Reg</a></li>
+            <li><a href="javascript:void(0)" onclick="javascript:outstanding_rent()">Utestånde leie</a></li>
+             <li><a href="javascript:void(0)" onclick="javascript:delivery_expected_today()">Forventet Inn i dag</a></li>
+            <li><a href="javascript:void(0)" onclick="javascript:today_list()">Dagens</a></li>
+            <li><a href="javascript:void(0)" onclick="javascript:priceList()">Pris Liste</a></li>
+            <li><a href="javascript:void(0)" onclick="javascript:endOfDay()">Dags Oppgjør</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
